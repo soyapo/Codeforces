@@ -1,22 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ios ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);
+
 const int mn = 2e5 + 2;
 bool flag[mn];
+
 int b, e, n, m, ans = 1e9 + 22;
+
 vector <int> v[mn];
+
 void dfs(int x, int k = 0){
     if(x==e){
         ans = min(ans, k);
         return;
     }
+    
     flag[x] = true;
-    for(int i = 0; i < v[x].size(); i++){
-        int y =v[x][i];
-        if(!flag[y]) dfs(y, k + 1);
-    }
+
+    for(int i = 0; i < v[x].size(); i++)
+        if(!flag[v[x][i]]) 
+            dfs(v[x][i], k + 1);
+
     flag[x] = false;
 }
+
 int main(){
     ios
     cin>>n>>m;
