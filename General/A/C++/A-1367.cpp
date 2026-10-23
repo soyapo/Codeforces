@@ -9,7 +9,7 @@ int main(){
         cin>>s;
         cout<<s[0];
         for(int i = 1; i < s.length() - 1; i+=2) cout<<s[i];
-        cout<<s[s.length() - 1]<<endl;
+        cout<<s[s.length() - 1]<<'\n';
     }
     return 0;
 }

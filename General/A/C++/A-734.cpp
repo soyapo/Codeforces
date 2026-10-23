@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
+	ios_base::sync_with_stdio(0); cin.tie(NULL);
 	int danik = 0, anton = 0, count;
 	string str;
 	cin>>count>>str;

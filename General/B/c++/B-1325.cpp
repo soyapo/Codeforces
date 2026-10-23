@@ -12,7 +12,7 @@ int main(){
             cin>>a;
             nums.insert(a);
         }
-        cout<<nums.size()<<endl;
+        cout<<nums.size()<<'\n';
     }
     return 0;
 }

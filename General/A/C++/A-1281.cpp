@@ -6,7 +6,7 @@ int main(){
     int t; cin>>t;
     while(t--){
         string s; cin>>s;
-        cout<<(s[s.length() - 1] == 'o' ? "FILIPINO" : (s[s.length() - 1] == 'u' ? "JAPANESE" : "KOREAN"))<<endl;
+        cout<<(s[s.length() - 1] == 'o' ? "FILIPINO" : (s[s.length() - 1] == 'u' ? "JAPANESE" : "KOREAN"))<<'\n';
     }
     return 0;
 }

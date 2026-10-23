@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int m, s, first;
     string full = "";
     cin >> m >> s;
@@ -12,7 +13,7 @@ int main(){
     first = max(min(s, 1), s - (9 * (m - 1)));
     s -= first;
     full.append(to_string(first));
-    for (int i = 1; i < m; i++) s -= max(0, s - (9 * (m - i - 1))), full.append(to_string(max(0, s - (9 * (m - i - 1)))));
+    for (int i = 1; i < m; i++) full.append(to_string(max(0, s - (9 * (m - i - 1))))), s -= max(0, s - (9 * (m - i - 1)));
     full.append(" ");
     for(int i = 0; i < m; i++){
         if(s2>9) full.append("9"), s2-=9;

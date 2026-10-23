@@ -5,7 +5,7 @@ int main() {
     cin.tie(NULL);
     string str1, str2; cin>>str1>>str2;
     int x1=str1[0]-'a'+1, y1=str1[1]-'0',x2=str2[0]-'a'+1,y2=str2[1]-'0', dist=max(abs(x1-x2),abs(y1-y2));
-    cout<<dist<<endl;
+    cout<<dist<<'\n';
     while(dist--){
 	    if(x1>x2&&y1>y2) {x1--;y1--; cout<<"LD\n";}
 		else if(x1>x2&&y1==y2){x1--;cout<<"L\n";}

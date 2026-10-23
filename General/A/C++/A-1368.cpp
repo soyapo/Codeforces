@@ -12,7 +12,7 @@ int main(){
                 swap(a, b);
                 a += b, cnt++; 
         }
-        cout<<cnt<<endl;
+        cout<<cnt<<'\n';
     }
     return 0;
 }

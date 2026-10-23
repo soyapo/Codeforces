@@ -31,14 +31,17 @@ int main(){
         cout<<"-1";
     else{
         int tp = max(nums[maxindex].first, nums[maxindex].second), sp = sqrt(ar) - min(nums[maxindex].first, nums[maxindex].second);
-        cout<<sqrt(ar)<<endl;
+        if(max(nums[valids[0]].first, nums[valids[0]].second) + min(nums[valids[1]].first, nums[valids[1]].second) == maxall && 
+                min(nums[valids[0]].first, nums[valids[0]].second) == sp && max(nums[valids[1]].first, nums[valids[1]].second) == sp)
+            swap(valids[0], valids[1]);
         if(min1 + min2 + min3 == sqrt(ar) && max1 == max2 && max2 == max3){
+            cout<<sqrt(ar)<<'\n';
             while(min1--)
-                cout<<string(max1, 'A')<<endl;
+                cout<<string(max1, 'A')<<'\n';
             while(min2--)
-                cout<<string(max2, 'B')<<endl;
+                cout<<string(max2, 'B')<<'\n';
             while(min3--)
-                cout<<string(max3, 'C')<<endl;
+                cout<<string(max3, 'C')<<'\n';
         }
         else if(min(nums[valids[0]].first, nums[valids[0]].second) + 
                 min(nums[valids[1]].first, nums[valids[1]].second) == maxall && 
@@ -46,15 +49,16 @@ int main(){
                 max(nums[valids[1]].first, nums[valids[1]].second) && 
                 max(nums[valids[0]].first, nums[valids[0]].second) == sp){
             int tmp = min(nums[maxindex].first, nums[maxindex].second);
+            cout<<sqrt(ar)<<'\n';
             while(tmp--)
-                cout<<string(maxall, maxchar)<<endl;
+                cout<<string(maxall, maxchar)<<'\n';
             while(sp--){
                 if(maxchar=='A')
-                    cout<<string(min2, 'B')<<string(min3, 'C')<<endl;
+                    cout<<string(min2, 'B')<<string(min3, 'C')<<'\n';
                 else if(maxchar=='B')
-                    cout<<string(min1, 'A')<<string(min3, 'C')<<endl;
+                    cout<<string(min1, 'A')<<string(min3, 'C')<<'\n';
                 else if(maxchar=='C')
-                    cout<<string(min2, 'B')<<string(min1, 'A')<<endl;
+                    cout<<string(min2, 'B')<<string(min1, 'A')<<'\n';
             }
         }
         else if(max(nums[valids[0]].first, nums[valids[0]].second) + 
@@ -63,15 +67,16 @@ int main(){
                 min(nums[valids[1]].first, nums[valids[1]].second) && 
                 min(nums[valids[0]].first, nums[valids[0]].second) == sp){
             int tmp = min(nums[maxindex].first, nums[maxindex].second);
+            cout<<sqrt(ar)<<'\n';
             while(tmp--)
-                cout<<string(maxall, maxchar)<<endl;
+                cout<<string(maxall, maxchar)<<'\n';
             while(sp--){
                 if(maxchar=='A')
-                    cout<<string(max2, 'B')<<string(max3, 'C')<<endl;
+                    cout<<string(max2, 'B')<<string(max3, 'C')<<'\n';
                 else if(maxchar=='B')
-                    cout<<string(max1, 'A')<<string(max3, 'C')<<endl;
+                    cout<<string(max1, 'A')<<string(max3, 'C')<<'\n';
                 else if(maxchar=='C')
-                    cout<<string(max2, 'B')<<string(max1, 'A')<<endl;
+                    cout<<string(max2, 'B')<<string(max1, 'A')<<'\n';
             }
         }
         else if(min(nums[valids[0]].first, nums[valids[0]].second) + 
@@ -80,23 +85,11 @@ int main(){
                 min(nums[valids[1]].first, nums[valids[1]].second) && 
                 max(nums[valids[0]].first, nums[valids[0]].second) == sp){
             int tmp = min(nums[maxindex].first, nums[maxindex].second);
-            cout<<maxchar<<" "<<second<<" "<<endl;
+            cout<<sqrt(ar)<<'\n';
             while(tmp--)
-                cout<<string(maxall, maxchar)<<endl;
-            while(sp--){
-                if(maxchar=='A' || second == 'B')
-                    cout<<string(max2, 'B')<<string(min3, 'C')<<endl;
-                else if(maxchar=='A' || second == 'C')
-                    cout<<string(max3, 'C')<<string(min2, 'B')<<endl;
-                else if(maxchar=='B' || second == 'A')
-                    cout<<string(max1, 'A')<<string(min3, 'C')<<endl;
-                else if(maxchar=='B' || second == 'C')
-                    cout<<string(max3, 'C')<<string(min1, 'A')<<endl;
-                else if(maxchar=='C' || second == 'B')
-                    cout<<string(max2, 'B')<<string(min1, 'A')<<endl;
-                else if(maxchar=='C' || second == 'A')
-                    cout<<string(max1, 'A')<<string(min2, 'B')<<endl;
-            }
+                cout<<string(maxall, maxchar)<<'\n';
+            while(sp--)
+                cout<<string(min(nums[valids[0]].first, nums[valids[0]].second), char('A' + valids[0]))<<string(max(nums[valids[1]].first, nums[valids[1]].second), char('A' + valids[1]))<<'\n';
         }
         else
             cout<<"-1";

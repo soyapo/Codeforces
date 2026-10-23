@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int t, n, now, previous, height = 1, is_dead; cin >> t;
     while (t--){
         cin >> n;
@@ -20,7 +21,7 @@ int main(){
             }
         }
         if (is_dead) cout << "-1\n";
-        else cout << height << endl;
+        else cout << height << '\n';
     }
     return 0;
 }

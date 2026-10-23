@@ -8,7 +8,7 @@ int count_unique_char(char* str) {
 }
 int main() {
 	char str[300];
-	gets(str);
+	cin>>str;
 	int count = count_unique_char(str);
 	if(count%2==1) cout<<"IGNORE HIM!";
 	else cout<<"CHAT WITH HER!";

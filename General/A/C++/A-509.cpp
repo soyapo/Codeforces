@@ -9,6 +9,6 @@ int main(){
         for(int j = 1; j < 10; j++) nums[i][j] = nums[i - 1][j] + nums[i][j - 1];
     }
     int n; cin>>n;
-    cout<<nums[n - 1][n - 1]<<endl;
+    cout<<nums[n - 1][n - 1]<<'\n';
     return 0;
 }

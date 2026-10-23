@@ -18,7 +18,7 @@ int main() {
     //     for(int h = 0; h < 2; h++){
     //         cout<<nums[i][h]<<" ";
     //     }
-    //     cout<<endl;
+    //     cout<<'\n';
     // }   
     return 0;
 }

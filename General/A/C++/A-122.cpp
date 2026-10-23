@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
+	ios_base::sync_with_stdio(0); cin.tie(NULL);
 	int n, tests[12] = {4, 7, 47, 74, 444, 777, 447, 744, 774, 477, 747, 474}, is_valid = 0;
 	cin>>n;
 	for(int i = 0; i < 12; i++)

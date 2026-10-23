@@ -16,12 +16,12 @@ int main(){
             nums[y][x] = 1;
         }
 
-        for(int i = 0; i < n; i++)
+        for(int i = 0; i <= n; i++)
             if(nums[0][i] && (nums[0][i] == nums[1][i]))
                 s += n - 2;
 
         for(int i = 0; i < 2; i++)
-            for(int j = 1; j < n - 1; j++)
+            for(int j = 1; j < n; j++)
                 if(nums[i][j] && nums[1 - i][j - 1] && nums[1 - i][j + 1])
                     s++;
 
@@ -29,7 +29,7 @@ int main(){
 
         
         for(int i = 0; i < 2; i++)
-            for(int j = 0; j < n; j++)
+            for(int j = 0; j <= n; j++)
                 nums[i][j] = 0;
     }
     return 0;

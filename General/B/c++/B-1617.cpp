@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int t, n, c, e;
     cin >> t;
     while (t--){
@@ -10,7 +11,7 @@ int main(){
         else{
             for(int i = 2; i < n - 3; i++){
                 if(i+(n-i-1)+1 == n && __gcd(i, n-i-1) == 1){
-                    cout<<i<<" "<<n-i-1<<" "<<1<<endl;
+                    cout<<i<<" "<<n-i-1<<" "<<1<<'\n';
                     break;
                 }
             }

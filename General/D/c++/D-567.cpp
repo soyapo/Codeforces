@@ -3,6 +3,7 @@ using namespace std;
 const int mn = 2e5 + 10;
 long long int n, k, a, m, l, r, mid, nums[mn], nums_tmp[mn];
 bool check(int tmp) {
+	if (tmp == 0) return (n + 1) / (a + 1) >= k;
 	for (int i = 0; i < tmp; i ++) nums_tmp[i] = nums[i];
 	sort(nums_tmp, nums_tmp + tmp);
 	int s = nums_tmp[0] / (a + 1);

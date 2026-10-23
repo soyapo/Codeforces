@@ -4,6 +4,7 @@ int manhattan(int x1, int y1, int x2, int y2){
     return abs(x1 - x2) + abs(y1 - y2);
 }
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int t, x, y, is_done; cin >> t;
     for (int i = 0; i < t; i++){
         cin >> x >> y;

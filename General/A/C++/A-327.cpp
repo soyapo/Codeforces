@@ -3,26 +3,17 @@ using namespace std;
 #define fst ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);
 int main(){
     fst
-    int n, nums[110], o = 0; cin>>n;
-    pair <int, int> z;
+    int n, nums[110], o = 0, mx = -1000; cin>>n;
     for(int i = 0; i < n; i++)
         cin>>nums[i];
+    for(int i = 0; i < n; i++)
+        o += nums[i];
     for(int i = 0; i < n; i++){
-        if(!nums[i]){
-            z.first = i;
-            break;
-        }
+        int d = 0;
+        for(int j = i; j < n; j++)
+            d += (nums[j] ? -1 : 1), mx = max(mx, d);
     }
-    for(int i = n - 1; i >= 0; i--){
-        if(!nums[i]){
-            z.second = i;
-            break;
-        }
-    }
-    for(int i = 0; i < n; i++)    
-        if(nums[i])
-            o += ((i < z.first || i > z.second) ? 1 : -1);
-    cout<<o + z.second - z.first + 1;
+    cout<<o + mx;
     return 0;
 }
 /*

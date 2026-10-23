@@ -17,7 +17,7 @@ int main(){
     else{
         cout<<"YES\n";
         for(auto u: nums)
-            cout<<u<<endl;
+            cout<<u<<'\n';
     }
         
     return 0;

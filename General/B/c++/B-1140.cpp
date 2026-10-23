@@ -11,8 +11,8 @@ int main(){
         for(int i = 0; i < n; i++)
             if(s[i] == '<')
                 index = max(index, i);
-        if(f == -1 || index == -1) cout<<0<<endl;
-        else cout<<min(n-index-1, f)<<endl;
+        if(f == -1 || index == -1) cout<<0<<'\n';
+        else cout<<min(n-index-1, f)<<'\n';
     }
     return 0;
 }

@@ -7,11 +7,11 @@ int main(){
     cin>>t;
     while(t--){
         cin>>n;
-        if(n % 7 == 0) cout<<n<<endl;
+        if(n % 7 == 0) cout<<n<<'\n';
         else{
             for(int i = n - (n % 10); i < n - (n % 10) + 10; i++){
                 if(i % 7 == 0){
-                    cout<<i<<endl; 
+                    cout<<i<<'\n'; 
                     break;
                 }
             }

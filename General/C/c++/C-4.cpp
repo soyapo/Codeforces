@@ -9,7 +9,7 @@ int main(){
     for(int i = 0; i < n; i++){
         cin>>temp;
         if(names[temp] == 0) cout<<"OK\n";
-        else cout<<temp<<names[temp]<<endl;
+        else cout<<temp<<names[temp]<<'\n';
         names[temp]++;
     }
     return 0;

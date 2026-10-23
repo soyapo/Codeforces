@@ -7,8 +7,22 @@ int main(){
     string s;
     while(t--){
         cin>>s;
-        
+        int ans = 10;
+        for(int k = 0; k < 2; k++){
+            int g[2] = {0, 0}, left[2] = {5, 5};
+            for(int i = 0; i < 10; i++){
+                int p = i % 2;
+                if(s[i] == '1' || (s[i] == '?' && p == k)) g[p]++;
+                left[p]--;
+                if(g[0] > g[1] + left[1] || g[1] > g[0] + left[0]){
+                    ans = min(ans, i + 1);
+                    break;
+                }
+            }
+        }
+        cout<<ans<<'\n';
     }
+    return 0;
 }
 /*
       ___                       ___           ___           ___           ___           ___     

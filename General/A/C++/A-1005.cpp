@@ -14,7 +14,7 @@ int main(){
         else if(a != 1) cnt++;
     }
     nums.push_back(cnt);
-    cout<<one + 1<<endl;
+    cout<<one + 1<<'\n';
     for(auto u: nums) cout<<u<<' ';
     return 0;
 }

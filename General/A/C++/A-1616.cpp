@@ -13,7 +13,7 @@ int main(){
             nums[abs(tmp)]+=1;
         }
         for(int i = 0; i < 101; i++) sum = i == 0 ? sum + min(1, nums[0]) : sum + min(2, nums[i]);
-        cout<<sum<<endl;
+        cout<<sum<<'\n';
     }
     return 0;
 }

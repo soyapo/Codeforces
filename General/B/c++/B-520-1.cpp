@@ -13,14 +13,19 @@ int main(){
     for(int i = 0; i <= 2 * m; i++)
         d[i] = 1e4 + 10;
     d[n] = 0;
-    for(int i = 1; i <= m; i++){
-        nums[i].push_back({i * 2, 1});
+    for(int i = 1; i <= 2 * m; i++){
+        if(i * 2 <= 2 * m) nums[i].push_back({i * 2, 1});
         nums[i].push_back({i - 1, 1});
     }
-    for(int j = 1; j < 2 * m; j++)
-        for(int i = 1; i <= 2 * m; i++)
-            for(auto u: nums[i])
-                d[u.first] = min(d[u.first], d[i] + u.second);
+    queue <int> bfs;
+    bfs.push(n);
+    while(bfs.size()){
+        int v = bfs.front();
+        bfs.pop();
+        for(auto u: nums[v])
+            if(d[v] + u.second < d[u.first])
+                d[u.first] = d[v] + u.second, bfs.push(u.first);
+    }
     cout<<d[m];
     return 0;
 }

@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     long long t, nums[4], temp; cin >> t;
     while (t--){
         cin >> nums[0] >> nums[1] >> nums[2] >> nums[3];

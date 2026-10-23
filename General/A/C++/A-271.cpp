@@ -6,6 +6,7 @@ int good(int n){
     return 1;
 }
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int n; cin>>n;
     do n++;
     while(good(n) == 0);

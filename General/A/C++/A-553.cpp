@@ -17,7 +17,7 @@ int main(){
         sum += c;	
 		ans = (ans * nums[sum-1][c-1])%mod;
 	}
-	cout<<ans<<endl;
+	cout<<ans<<'\n';
     return 0;
 }
 /*

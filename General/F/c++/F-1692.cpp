@@ -11,7 +11,7 @@ int main(){
         for(int i = 0; i < n; i++){
             cin>>a;
             nums[a % 10]++;
-            if(nums[a % 10] < 3) 
+            if(nums[a % 10] <= 3) 
                 nums2.push_back((a % 10));
         }
         int c = nums2.size(), valid = 0;

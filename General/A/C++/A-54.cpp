@@ -2,19 +2,14 @@
 using namespace std;
 bool nums[366];
 int main(){
-    int n, k, c, a, valid, cnt = 0; cin>>n>>k>>c;
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
+    int n, k, c, a, last = 0, cnt = 0; cin>>n>>k>>c;
     for(int i = 0; i < c; i++){
         cin>>a;
         nums[a] = true;
     }
-    for(int i = 1; i <= n; i++){
-        valid = 0;
-        if(!nums[i])
-            for(int j = i + 1; j <= i + k; j++)
-                if(nums[j]) valid = 1;
-        if(!valid) nums[i + k] = true;
-        if(!valid && i == 1) nums[i] = true; 
-    }
+    for(int i = 1; i <= n; i++)
+        if(nums[i] || i - last == k) nums[i] = true, last = i;
     for(int i = 1; i <= n; i++)
         if(nums[i]) cnt++;
     cout<<cnt;

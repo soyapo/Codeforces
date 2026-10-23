@@ -8,7 +8,7 @@ int main(){
     while(n--){
         cin>>a>>b>>c;
         nums[0] = a > max(b, c) ? 0 : max(b, c) - a + 1, nums[1] = b > max(a, c) ? 0 : max(a, c) - b + 1, nums[2] = c > max(b, a) ? 0 : max(b, a) - c + 1;
-        cout<<nums[0]<<" "<<nums[1]<<" "<<nums[2]<<endl;
+        cout<<nums[0]<<" "<<nums[1]<<" "<<nums[2]<<'\n';
     }
     return 0;
 }

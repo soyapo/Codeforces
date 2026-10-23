@@ -24,7 +24,7 @@ int main(){
         }
         else{
             cin>>v>>u;
-            cout<<lca(v, u, 0)<<endl;
+            cout<<lca(v, u, 0)<<'\n';
         }
     }
     return 0;

@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     long long int a, x, ans = 1, nums[305], mod = 1000000007;
     string s, list = "";
 	cin>>s;
@@ -13,6 +14,6 @@ int main(){
 		x = nums[s[i]];
 		for (int j = 0; j < 6; j++) ans = (x&(1<<j)) == 0 ? (ans*3)%mod : ans; 
 	}
-	cout<<ans<<endl;
+	cout<<ans<<'\n';
 	return 0;
 }

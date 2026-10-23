@@ -10,6 +10,7 @@ int countDistinct(int arr[], int n, int res){
     return res;
 }
 int main(){
+	ios_base::sync_with_stdio(0); cin.tie(NULL);
 	int n, m, is_valid = 1, temp; cin>>n>>m;
 	int chars[m];
 	string test_1, test_2;

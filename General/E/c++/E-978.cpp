@@ -3,6 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int n, w, s = 0, tmp = 0, mn = 0, mx = 0; cin>>n>>w;
     for(int i = 0; i < n; i++){
         cin>>tmp;

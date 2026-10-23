@@ -18,7 +18,7 @@ int main() {
     for(int i = 0; i < 6; i++){
         if(nums[i]==0) cnt++;
     }
-    cout<<cnt<<endl;
+    cout<<cnt<<'\n';
     if(nums[0] == 0) cout<<"Power\n";
     if(nums[1] == 0) cout<<"Time\n";
     if(nums[2] == 0) cout<<"Space\n";

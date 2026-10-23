@@ -5,6 +5,7 @@ vector<int> b_nums;
 string test;
 int is_valid = 0;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     cin >> test;
     for (int i = 0; i < test.length(); i++){
         if (test[i] == 'A' && test[i + 1] == 'B'){

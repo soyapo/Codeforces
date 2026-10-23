@@ -9,7 +9,7 @@ int main(){
         if(s[i] == '0') z++;
         else o++;
     }
-    cout<<max(o, z) - min(o, z)<<endl;
+    cout<<max(o, z) - min(o, z)<<'\n';
     return 0;
 }
 /*

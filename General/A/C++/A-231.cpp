@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std ;
 int main() {
+	ios_base::sync_with_stdio(0); cin.tie(NULL);
 	int count = 0, temp = 0, counter_main = 0, counter_sub = 0; cin>>count;
 	for(int i = 0; i<count;i++){
 		counter_sub = 0;

@@ -13,7 +13,7 @@ int main(){
             p1++, p2--;
         }
         if(n%2==1) cout<<nums[p1]<<" ";
-        cout<<endl;
+        cout<<'\n';
     }
     return 0;
 }

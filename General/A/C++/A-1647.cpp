@@ -9,19 +9,19 @@ int main(){
         if(n%3==0){
             for(int i = 0; i < n/3; i++)
                 cout<<"21";
-            cout<<endl;
+            cout<<'\n';
         }
         else if(n%3==1){
             cout<<1;
             for(int i = 0; i < (n - 1) / 3; i++)
                 cout<<"21";
-            cout<<endl;
+            cout<<'\n';
         }
         else{
             cout<<2;
             for(int i = 0; i < (n - 2) / 3; i++)
                 cout<<"12";
-            cout<<endl;
+            cout<<'\n';
         }
     }
     return 0;

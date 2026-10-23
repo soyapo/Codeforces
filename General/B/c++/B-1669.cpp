@@ -13,7 +13,7 @@ int main(){
             nums[s]++;
             if(nums[s] >= 3) ans = s;
         }
-        cout<<ans<<endl;
+        cout<<ans<<'\n';
     }
     return 0;
 }

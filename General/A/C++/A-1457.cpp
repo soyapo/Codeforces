@@ -7,7 +7,7 @@ int main(){
     cin>>t;
     while(t--){
         cin>>n>>m>>r>>c;
-        cout<<max(n - r, r - 1) + max(m - c, c - 1)<<endl; 
+        cout<<max(n - r, r - 1) + max(m - c, c - 1)<<'\n'; 
     }
     return 0;
 }

@@ -8,14 +8,18 @@ int main(){
     int index = 0, valid;
     while(q--){
         cin>>s>>t;
-        for(int i = 0; i < s.length(); i++){
-            index = i;
-            for(int j = 0; j < t.length(); j++){
-                if(s[i] != t[j]) break;
-                else index++;
+        valid = 0;
+        int n = s.length(), m = t.length();
+        for(int i = 0; i < n && !valid; i++){
+            for(int j = i; j < n && j - i < m && !valid; j++){
+                if(s[j] != t[j - i]) break;
+                index = j - i + 1;
+                int k = j - 1;
+                while(index < m && k >= 0 && s[k] == t[index]) index++, k--;
+                if(index == m) valid = 1;
             }
-            cout<<i<<": "<<index<<endl;
         }
+        cout<<(valid ? "YES\n" : "NO\n");
     }
 }
 /*

@@ -3,6 +3,7 @@ using namespace std;
 const int MAXN = 60;
 char chars[MAXN][MAXN];
 int main(){
+	ios_base::sync_with_stdio(0); cin.tie(NULL);
 	int n, m; cin>>n>>m;
 	int left=60, right=-1, top=50, bot=-1;
 	for(int i = 0; i < n; i++){
@@ -13,7 +14,7 @@ int main(){
 	}
 	for(int i = top; i<=bot; i++){
 		for(int j = left; j<=right; j++) cout<<chars[i][j];
-		cout<<endl;	
+		cout<<'\n';	
 	}
 	return 0;
 }

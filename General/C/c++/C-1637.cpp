@@ -17,7 +17,7 @@ int main(){
             }
         }
         if(cnt == n - 2 || (n == 3 && a2 % 2 == 1)) cout<<"-1\n";
-        else cout<<ans<<endl;
+        else cout<<ans<<'\n';
     }
     return 0;
 }

@@ -4,6 +4,7 @@ const int mn = 2000;
 pair<int, int> nums[mn];
 int final[mn];
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int n, score, counter = 0;
     cin >> n;
     for (int i = 0; i < n; i++){

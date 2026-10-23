@@ -6,6 +6,7 @@ string names[MAXN];
 map<string, int> values;
 map<string, int> temp;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int n, maks = 0;
     string winner;
     cin >> n;

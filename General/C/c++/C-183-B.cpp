@@ -32,7 +32,7 @@ int main(){
     for(int i = 0; i < n; i++)
         if(!flag[i])
             dfs(i);
-    cout<<(!temp ? n : temp)<<endl;
+    cout<<(!temp ? n : temp)<<'\n';
     return 0;
 }
 /*

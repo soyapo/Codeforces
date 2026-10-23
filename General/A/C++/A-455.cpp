@@ -4,6 +4,7 @@ const int mn = 1e5 + 1;
 long long int dp[mn + 10];
 map <long long int, long long int> nums;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int n, mx = -1, tmp; cin>>n;
     for(int i = 0; i < n; i++){
         cin>>tmp;

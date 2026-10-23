@@ -21,7 +21,7 @@ int main(){
             }
         }
         for(int i = 0; i < n; i++) sum+=a[i];
-        cout<<endl<<sum<<endl<<endl;
+        cout<<'\n'<<sum<<'\n'<<'\n';
     }
     return 0;
 }

@@ -7,12 +7,10 @@ int main(){
     int index = 1, t; cin>>t;
     for(char i = 'a'; i <= 'z'; i++)
         for(char j = 'a'; j <= 'z'; j++)
-            if(i != j) nums[to_string(i) + to_string(j)] = index, index++;
+            if(i != j) nums[string(1, i) + j] = index, index++;
     string s;
     while(t--){
         cin>>s;
-        cout<<nums[s]<<endl;
+        cout<<nums[s]<<'\n';
     }
-    for(auto u: nums)
-        cout<<u.first<<" "<<u.second<<endl;
 }

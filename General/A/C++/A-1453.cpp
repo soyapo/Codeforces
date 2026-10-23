@@ -16,7 +16,7 @@ int main(){
             cin>>a;
             if(trains[a] > 0) cnt++;
         }
-        cout<<endl<<cnt<<endl<<endl;
+        cout<<'\n'<<cnt<<'\n'<<'\n';
     }
     return 0;
 }

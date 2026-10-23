@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int n, count = 0; cin>>n;
     string tmp;
     char now = '#', then;
@@ -13,6 +14,6 @@ int main(){
             then = tmp[1];
         }
     }
-    cout<<count++;
+    cout<<++count;
     return 0;
 }

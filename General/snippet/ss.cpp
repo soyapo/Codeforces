@@ -8,7 +8,7 @@ int main(){
     while(t--){
         cout<<"\n\n";
         string s; cin>>s;
-        for(int i = 0; i < 50; i++)
+        for(int i = 0; i < 50 && i < (int)s.size(); i++)
             cout<<s[i]<<' ';
         cout<<"\n\n";
     }

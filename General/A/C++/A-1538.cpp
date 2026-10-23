@@ -14,7 +14,7 @@ int main(){
         right = max(index_max, index_min), left = min(index_max, index_min);
         int ans = min(right, n - left + 1);
         ans = min(ans, (n - right + 1) + left);
-        cout<<endl<<ans<<endl<<endl;
+        cout<<'\n'<<ans<<'\n'<<'\n';
     }
     return 0;
 }

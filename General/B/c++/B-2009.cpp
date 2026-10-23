@@ -15,7 +15,7 @@ int main(){
         }
         for(int i = n - 1; i >= 0; i--)
             cout<<nums[i]<<' ';
-        cout<<endl;
+        cout<<'\n';
     }
     return 0;
 }

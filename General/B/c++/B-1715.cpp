@@ -3,12 +3,18 @@ using namespace std;
 #define fst ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);
 int main(){
     fst
-    int t, n, k, b, s; cin>>t;
+    long long t, n, k, b, s; cin>>t;
     while(t--){
         cin>>n>>k>>b>>s;
-        if(s >= k * b && s <= k * b + (k - 1) * n)
-            
-
+        if(s >= k * b && s <= k * b + (k - 1) * n){
+            s -= k * b;
+            for(int i = 0; i < n; i++){
+                long long add = min(k - 1, s);
+                cout<<(i == 0 ? k * b : 0) + add<<' ';
+                s -= add;
+            }
+            cout<<'\n';
+        }
         else cout<<-1<<'\n';
     }
 }

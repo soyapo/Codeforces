@@ -1,29 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     string seq;
-    int n, cn = 0, tmp;
+    int n, cn = 0;
     cin>>n>>seq;
-    for(int i = 1; i <= n; i++){
-        tmp = i;
-        for(int j = 0; j < seq.length(); j++){
-            if(seq[j] == '>'){
-                if(tmp + 1 > n){
-                    cn++;
-                    goto star;
-                }
-                else tmp++;
-            }
-            if(seq[j] == '<'){
-                if(tmp - 1 < 1){
-                    cn++;
-                    goto star; 
-                }
-                else tmp--;
-            }
-        }
-        star:tmp = tmp + 1 - 1;
-    }
+    for(int i = 0; i < n && seq[i] == '<'; i++) cn++;
+    for(int i = n - 1; i >= 0 && seq[i] == '>'; i--) cn++;
     cout<<cn;
     return 0;
 }

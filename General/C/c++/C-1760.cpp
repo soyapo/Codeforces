@@ -19,7 +19,7 @@ int main(){
                 cout<<tp[i] - nums[n - 1].first<<' ';
             else
                 cout<<tp[i] - nums[n - 2].first<<' ';
-        cout<<endl;
+        cout<<'\n';
     }
     return 0;
 }

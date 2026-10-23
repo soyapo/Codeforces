@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std ;
 int main() {
+	ios_base::sync_with_stdio(0); cin.tie(NULL);
 	string name_1, name_2; cin>>name_1>>name_2;
 	transform(name_1.begin(), name_1.end(), name_1.begin(), ::tolower);
 	transform(name_2.begin(), name_2.end(), name_2.begin(), ::tolower);

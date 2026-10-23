@@ -31,7 +31,7 @@ int main(){
         nums[y].push_back(x);
     }
     dfs(0, 0);
-    cout<<endl<<ans;
+    cout<<'\n'<<ans;
     return 0;
 }
 /*

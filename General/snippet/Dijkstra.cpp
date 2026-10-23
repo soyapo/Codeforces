@@ -10,8 +10,12 @@
 //         nums[a].push_back({b, w});
 //         nums[b].push_back({a, w});
 //     }
-//     for(int j = 1; j < m; j++)
-//         for(int i = 1; i <= m; i++)
-//             for(auto u: nums[i])
-//                 if(d[u.first] > d[i] + u.second)
-//                     d[u.first] = d[i] + u.second, dad[u.first] = i;
+//     priority_queue <pair<int, int>, vector <pair<int, int>>, greater <pair<int, int>>> pq;
+//     pq.push({0, 1});
+//     while(!pq.empty()){
+//         int v = pq.top().second, dv = pq.top().first; pq.pop();
+//         if(dv > d[v]) continue;
+//         for(auto u: nums[v])
+//             if(d[u.first] > d[v] + u.second)
+//                 d[u.first] = d[v] + u.second, dad[u.first] = v, pq.push({d[u.first], u.first});
+//     }

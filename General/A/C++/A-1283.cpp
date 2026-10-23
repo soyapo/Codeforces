@@ -6,7 +6,7 @@ int main(){
     int n, h, m; cin>>n;
     while(n--){
         cin>>h>>m;
-        cout<<((24-h) * 60) - m<<endl;
+        cout<<((24-h) * 60) - m<<'\n';
     }
     return 0;
 }

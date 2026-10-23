@@ -11,12 +11,12 @@ int main(){
     else if((!a && !b && c) || d < 0)
         return cout<<0, 0;
     else if(!a)
-        cout<<1<<endl<<fixed<<setprecision(5)<<mc / b;
+        cout<<1<<'\n'<<fixed<<setprecision(5)<<mc / b;
     else if(!d)
-        cout<<1<<endl<<fixed<<setprecision(5)<<mb / (2 * a);
+        cout<<1<<'\n'<<fixed<<setprecision(5)<<mb / (2 * a);
     else{
-        float x1 = (mb + sqrt(d)) / (2 * a), x2 = (mb - sqrt(d)) / (2 * a);
-        cout<<2<<endl<<fixed<<setprecision(5)<<min(x1, x2)<<'\n'<<max(x1, x2);
+        double x1 = (mb + sqrt(d)) / (2 * a), x2 = (mb - sqrt(d)) / (2 * a);
+        cout<<2<<'\n'<<fixed<<setprecision(5)<<min(x1, x2)<<'\n'<<max(x1, x2);
     }
     return 0;
 }

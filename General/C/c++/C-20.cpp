@@ -4,7 +4,7 @@ using namespace std;
 const int mn = 1e5 + 10;
 vector <int> nums[mn];
 map <pair<int, int>, int> wgh;
-priority_queue <int> q;
+priority_queue <pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> q;
 int n, m, a, b, w, t, par[mn];
 long long dist[mn];
 void prt(int x);
@@ -19,13 +19,15 @@ int main(){
         nums[b].push_back(a);
         wgh[{a, b}] = (!wgh[{a, b}] ? w : min(w, wgh[{a, b}])), wgh[{b, a}] = (!wgh[{b, a}] ? w : min(w, wgh[{b, a}]));
     }
-    q.push(1);
+    q.push({0, 1});
     while(q.size()){
-        t = q.top();
+        t = q.top().second;
+        long long d = q.top().first;
         q.pop();
+        if(d > dist[t]) continue;
         for(int i = 0; i < nums[t].size(); i++)
             if(dist[t] + wgh[{t, nums[t][i]}] < dist[nums[t][i]]) 
-                dist[nums[t][i]] = dist[t] + wgh[{t, nums[t][i]}], par[nums[t][i]] = t, q.push(nums[t][i]);
+                dist[nums[t][i]] = dist[t] + wgh[{t, nums[t][i]}], par[nums[t][i]] = t, q.push({dist[nums[t][i]], nums[t][i]});
     }
     if(dist[n] == 1e18)
         return cout<<-1, 0;

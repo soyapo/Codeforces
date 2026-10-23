@@ -27,7 +27,7 @@ int main(){
             if(flag[v]) ans++;
             for(int k = 0; k < mn; k++) flag[k] = 0;
         }
-        cout<<ans<<endl;
+        cout<<ans<<'\n';
     }
     return 0;
 }

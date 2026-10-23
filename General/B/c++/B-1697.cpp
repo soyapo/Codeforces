@@ -9,12 +9,11 @@ int main(){
     for(int i = 0; i < n; i++)
         cin>>nums[i];
     sort(nums, nums + n);
-    sums[0] = nums[0];
-    for(int i = 1; i < n; i++)
-        sums[i] = sums[i - 1] + nums[i];
+    for(int i = 0; i < n; i++)
+        sums[i + 1] = sums[i] + nums[i];
     for(int i = 0; i < q; i++){
         cin>>x>>y;
-        cout<<sums[n - x + y - 1] - sums[n - x - 1]<<'\n';
+        cout<<sums[n - x + y] - sums[n - x]<<'\n';
     }
     return 0;
 }

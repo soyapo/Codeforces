@@ -10,6 +10,7 @@ int bs(int l , int r , long long x){
     else return bs(l , mid - 1 , x) ;
 }
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     long long int n, m, sum = 0, t; cin>>n>>m;
     for(int i = 1 ; i <= n ; i ++){
         cin>>a[i];
@@ -18,7 +19,7 @@ int main(){
     for(int i = 1; i <= m; i++) cin >> b[i];
     for(int i = 1 ;i <= m ; i ++){
         t = bs(1 , n , b[i]) ;
-        cout<<t<<" "<<b[i]-ans[t - 1]<<endl;
+        cout<<t<<" "<<b[i]-ans[t - 1]<<'\n';
     }
     return 0;
 }

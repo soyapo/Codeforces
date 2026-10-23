@@ -5,8 +5,6 @@ int main(){
     cin.tie(NULL);
     int n, s = 0; cin>>n;
     for(int i = 2; i < n; i++) s += i*(i+1);
-    cout<<s<<endl;
-    n--;
-    cout<<n * (n+1) * (n+2) / 3 - 2;
+    cout<<s<<'\n';
     return 0;
 }

@@ -8,9 +8,9 @@
             cin >> x >> y;
             s = x * x + y * y, ss = 0;
             while (ss * ss < s) ss++;
-            if(!x && !y) cout<<0<<endl;
-            else if(ss * ss == s) cout<<1<<endl;
-            else cout<<2<<endl;
+            if(!x && !y) cout<<0<<'\n';
+            else if(ss * ss == s) cout<<1<<'\n';
+            else cout<<2<<'\n';
     }
         return 0;
     }

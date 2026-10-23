@@ -11,14 +11,14 @@ void dfs(int v){
             color[u] = color[v] + 1;
             dfs(u);
         }
-        else temp = abs(color[v] + 1 - color[u]);
+        else if(abs(color[v] + 1 - color[u])) temp = abs(color[v] + 1 - color[u]);
     }
     for(auto u: nums2[v]){
         if(!flag[u]){
             color[u] = color[v] - 1;
             dfs(u);
         }
-        else temp = abs(color[v] - 1 - color[u]);
+        else if(abs(color[v] - 1 - color[u])) temp = abs(color[v] - 1 - color[u]);
     }
 }
 void dfs2(int v, int k){
@@ -31,7 +31,15 @@ void dfs2(int v, int k){
         }
         else{
             if(color[u] != (color[v] + 1) % k) valid = 0;
-            else valid = 0;
+        }
+    }
+    for(int u: nums2[v]){
+        if(!flag[u]){
+            color[u] = (color[v] - 1 + k) % k;
+            dfs2(u, k);
+        }
+        else{
+            if(color[u] != (color[v] - 1 + k) % k) valid = 0;
         }
     }
 }
@@ -46,19 +54,20 @@ int main(){
     for(int i = 0; i < n; i++)
         if(!flag[i])
             dfs(i);
+    if(!temp) return cout<<n, 0;
     int mx = -1;
     for(int i = sqrt(temp); i >= 1; i--){
         if(temp % i == 0){
             valid = 1;
-            for(int j = 0; j < n; j++) flag[i] = 0;
-            for(int j = 0; j < n; j++) color[i] = 0;
+            for(int j = 0; j < n; j++) flag[j] = 0;
+            for(int j = 0; j < n; j++) color[j] = 0;
             for(int j = 0; j < n; j++)
                 if(!flag[j])
                     dfs2(j, i);
             if(valid) mx = max(mx, i);
             valid = 1;
-            for(int j = 0; j < n; j++) flag[i] = 0;
-            for(int j = 0; j < n; j++) color[i] = 0;
+            for(int j = 0; j < n; j++) flag[j] = 0;
+            for(int j = 0; j < n; j++) color[j] = 0;
             for(int j = 0; j < n; j++)
                 if(!flag[j])
                     dfs2(j, temp / i);

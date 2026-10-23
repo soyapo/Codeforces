@@ -15,6 +15,7 @@ int count_prime_divisor(int test){
     return counter;
 }
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int n, counter = 0; cin>>n;
     for (int i = 2; i <= n; i++)
         if (!is_prime(i) && count_prime_divisor(i) == 2) counter++;

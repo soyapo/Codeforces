@@ -1,4 +1,5 @@
 hard = 0
-for i in range(0, int(input())):
-    hard = hard | int(input())
+input()
+for x in input().split():
+    hard = hard | int(x)
 print("hard") if(hard) else print("easy")

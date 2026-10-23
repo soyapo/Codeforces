@@ -13,10 +13,10 @@ int main(){
         else c[2][c3] = i + 1, c3++;
     }
     int mn = min(c1, min(c2, c3));
-    cout<<mn<<endl;
+    cout<<mn<<'\n';
     for(int i = 0; i < mn; i++){
             cout<<c[0][i]<<" "<<c[1][i]<<" "<<c[2][i];
-        cout<<endl;
+        cout<<'\n';
     }
     return 0;
 }

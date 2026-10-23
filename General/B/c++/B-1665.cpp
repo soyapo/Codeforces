@@ -17,7 +17,7 @@ int main(){
             mx = max(mx, it->second);
         }
         while(mx < n) ad = min(n - mx, mx), ans += ad + 1, mx += ad;
-        cout<<ans<<endl;
+        cout<<ans<<'\n';
     }
     return 0;
 }

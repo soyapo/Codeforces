@@ -11,7 +11,7 @@ int main(){
         for(int i = 1; i * i <= n; i++) nums[i * i]++;
         for(int i = 1; i * i * i <= n; i++) nums[i * i * i]++;
         for(auto u: nums) cnt++;
-        cout<<cnt<<endl;
+        cout<<cnt<<'\n';
     }
     return 0;
 }

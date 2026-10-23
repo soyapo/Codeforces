@@ -2,6 +2,7 @@
 using namespace std;
 bool nums[366];
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int n, pos = 1, t; cin>>n;
     map <int, int> nums;
     for(int i = 1; i <= 2 * n; i++)

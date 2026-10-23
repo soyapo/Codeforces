@@ -5,14 +5,14 @@ int main(){
     cin.tie(NULL);
     int n, m, right = 1; cin>>n>>m;
     for(int i = 1; i <= n; i++){
-        if(i%2==1) cout<<string(m,'#')<<endl;
+        if(i%2==1) cout<<string(m,'#')<<'\n';
         else{
             if(right){
-                cout<<string(m - 1, '.')<<"#"<<endl;
+                cout<<string(m - 1, '.')<<"#"<<'\n';
                 right = 1 - right;
             }
             else{
-                cout<<'#'<<string(m - 1, '.')<<endl;
+                cout<<'#'<<string(m - 1, '.')<<'\n';
                 right = 1 - right;
             }
         }

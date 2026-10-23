@@ -8,7 +8,19 @@ int main(){
     while(t--){
         cin>>n>>s;
         //LRRLL
-
+        long long int sum = 0;
+        vector <int> gain;
+        for(int i = 0; i < n; i++){
+            int cur = (s[i] == 'L' ? i : n - 1 - i);
+            sum += cur;
+            gain.push_back(max(i, n - 1 - i) - cur);
+        }
+        sort(gain.rbegin(), gain.rend());
+        for(int k = 0; k < n; k++){
+            sum += gain[k];
+            cout<<sum<<' ';
+        }
+        cout<<'\n';
     }
     return 0;
 }

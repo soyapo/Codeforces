@@ -7,7 +7,7 @@ int main(){
     fst
     long long int k, c, ans = 1, sum = 0;
 	cin>>k;
-    for (int i = 0; i <= mn; i++) {
+    for (int i = 0; i < mn; i++) {
 		nums[i][0]=1;
 		for (int j = 1; j <= i; j++) 
 			nums[i][j] = (nums[i-1][j-1] + nums[i-1][j]) % mod;
@@ -17,7 +17,7 @@ int main(){
         sum += c;	
 		ans = (ans * nums[sum-1][c-1])%mod;
 	}
-	cout<<ans<<endl;
+	cout<<ans<<'\n';
     return 0;
 }
 /*

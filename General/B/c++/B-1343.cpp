@@ -3,7 +3,7 @@ using namespace std;
 #define fst ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);
 int main(){
     fst
-    int t, n, sume, sumo; cin>>t;
+    int t, n; long long sume, sumo; cin>>t;
     while(t--){
         cin>>n;
         sume = 0, sumo = 0;
@@ -18,7 +18,7 @@ int main(){
                 cout<<i<<' ';
                 sumo+=i;
             }
-            cout<<sume - sumo<<endl;
+            cout<<sume - sumo<<'\n';
         }
     }
     return 0;

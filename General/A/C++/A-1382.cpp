@@ -17,7 +17,7 @@ int main(){
             cin>>b;
             if(nums[b] > 0) ans = b;
         }
-        if(ans) cout<<"YES\n"<<1<<" "<<ans<<endl;
+        if(ans) cout<<"YES\n"<<1<<" "<<ans<<'\n';
         else cout<<"NO\n";
     }
     return 0;

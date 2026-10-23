@@ -19,7 +19,7 @@ int main(){
                 break;
             }
         }
-        cout<<(!ans ? -1 : ans)<<endl;
+        cout<<(!ans ? -1 : ans)<<'\n';
     }
     return 0;
 }

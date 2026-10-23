@@ -11,7 +11,7 @@ int main(){
         cin>>n>>s;
         for(int i = 0; i < n; i++)
             cout<<chars[s[i]];
-        cout<<endl;
+        cout<<'\n';
     }
     return 0;
 }

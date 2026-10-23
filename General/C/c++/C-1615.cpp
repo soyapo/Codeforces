@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int t, n, c1a, c1b, cc = 0, ans = 1e9;
     cin>>t;
     string a, b;
@@ -14,7 +15,7 @@ int main(){
         }
         if(c1a == c1b) ans = min(ans, cc);
         if(c1a - 1 == n - c1b) ans = min(ans, n - cc);
-        if(ans != 1e9) cout<<ans<<endl;
+        if(ans != 1e9) cout<<ans<<'\n';
         else cout<<"-1\n";
     }
     return 0; 

@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int d, st, mn = 0, mx = 0; cin>>d>>st;
     pair <int, int> nums[d];
     int sch[d], req = st;

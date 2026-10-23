@@ -12,8 +12,8 @@ int main(){
             nums[i].second = i;
         }
         sort(nums, nums + n);
-        if(nums[0].first != nums[1].first) cout<<nums[0].second + 1<<endl;
-        else cout<<nums[n - 1].second + 1<<endl;
+        if(nums[0].first != nums[1].first) cout<<nums[0].second + 1<<'\n';
+        else cout<<nums[n - 1].second + 1<<'\n';
     }
     return 0;
 }

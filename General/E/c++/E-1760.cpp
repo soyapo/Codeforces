@@ -5,15 +5,19 @@ const int mn = 2e5 + 10;
 int nums[mn], dp[mn];
 int main(){
     fst
-    int T, n, z, s, mz; cin>>T;
+    int T, n, z, mz, lo; cin>>T;
+    long long int s, g;
     while(T--){
         cin>>n;
         for(int i = 0; i < n; i++)
             cin>>nums[i];
-        z = 0, s = 0, mz = 0;
+        z = 0, s = 0, mz = -1, lo = -1;
         for(int i = n - 1; i >= 0; i--)
-            dp[i] = z, mz = (!nums[i] ? i : mz), s += (nums[i] ? z : 0), z = (!nums[i] ? z + 1 : z);
-        cout<<s + dp[mz] - n + z;
+            dp[i] = z, mz = (!nums[i] ? i : mz), lo = (nums[i] && lo == -1 ? i : lo), s += (nums[i] ? z : 0), z = (!nums[i] ? z + 1 : z);
+        g = 0;
+        if(mz != -1) g = max(g, (long long int)dp[mz] - mz);
+        if(lo != -1) g = max(g, (long long int)(n - z - 1) - dp[lo]);
+        cout<<s + g<<'\n';
     }
     return 0;
 }

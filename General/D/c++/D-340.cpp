@@ -2,6 +2,7 @@
 using namespace std;
 vector <int> seq;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int n, tmp; cin>>n>>tmp;
     seq.push_back(tmp);
     for(int i = 1; i < n; i++){

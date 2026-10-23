@@ -11,7 +11,7 @@ int main(){
     while(t--){
         cin>>x>>y;
         int v = 0;
-        if((y / x) * x != y || y < x) cout<<"0 0"<<endl;
+        if((y / x) * x != y || y < x) cout<<"0 0"<<'\n';
         else{
             for(int b = 1; b <= 100; b++){
                 for(int a = 1; a <= 6; a++){
@@ -23,8 +23,8 @@ int main(){
                 }
                 if(v) break;
             }
+            cout<<a1<<" "<<b1<<'\n';
         }
-        cout<<a1<<" "<<b1<<endl;
     }
     return 0;
 }

@@ -6,7 +6,7 @@ int main(){
     long long int t, n; cin>>t;
     while(t--){
         cin>>n;
-        cout<<(n < 3 ? 0 : (!(n % 2) ? (n / 2) - 1 : (n - 1) / 2))<<endl;
+        cout<<(n < 3 ? 0 : (!(n % 2) ? (n / 2) - 1 : (n - 1) / 2))<<'\n';
     }
     return 0;
 }

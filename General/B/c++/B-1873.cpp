@@ -22,13 +22,12 @@ int main(){
         }
         else{            
             sort(a, a + n);
-            for(int i = 0; i < n - 1; i++)
+            for(int i = 1; i < n; i++)
                 if(a[i])
                     m *= a[i];
-            m *= (a[n - 1] + 1);
+            m *= (a[0] + 1);
             cout<<m<<'\n';
         }
-        cout<<z<<"\n\n";
     }
     return 0;
 }

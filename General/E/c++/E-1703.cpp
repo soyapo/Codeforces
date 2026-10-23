@@ -9,18 +9,22 @@ int main(){
         cin>>n;
         int z = 0, o = 0;
         for(int i = 0; i < n; i++){
-            for(int j = 0; j < 0; j++){
-                cin>>nums[i][j];
+            string s; cin>>s;
+            for(int j = 0; j < n; j++){
+                nums[i][j] = s[j] - '0';
                 z = (nums[i][j] ? z : z + 1), o = (nums[i][j] ? o + 1 : o);
             }
         }
         if(n < 3)
-            cout<<min(o, z);
+            cout<<min(o, z)<<'\n';
         else{
-            for(int i = 0; i < (n / 2) + (n % 2); i++){
-                vector <int> lst(101);
-                
-            }
+            int ans = 0;
+            for(int i = 0; i < n / 2; i++)
+                for(int j = 0; j < (n / 2) + (n % 2); j++){
+                    int c = nums[i][j] + nums[j][n - 1 - i] + nums[n - 1 - i][n - 1 - j] + nums[n - 1 - j][i];
+                    ans += min(c, 4 - c);
+                }
+            cout<<ans<<'\n';
         }
     }
     return 0;

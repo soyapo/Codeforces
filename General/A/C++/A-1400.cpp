@@ -10,9 +10,9 @@ int main(){
         if(n == 1) cout<<s;
         else{
             for(int i = 1; i <= n; i++)
-            cout<<s[i];
+            cout<<s[n - 1];
         }
-        cout<<endl;   
+        cout<<'\n';   
     }
     return 0;
 }

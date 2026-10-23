@@ -6,6 +6,7 @@ const int mn = 1e3 + 2;
 int nums[mn][mn], result[mn][mn];
 
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int n, m; 
     cin>>n>>m;
     for(int i = 1; i <= n; i++)
@@ -18,7 +19,7 @@ int main(){
     cin>>q;
     for(int i = 0; i < q; i++){
         cin>>x1>>y1>>x2>>y2;
-        cout<<result[x2][y2] - result[x2][y1-1] - result[x1-1][y2] - result[x1-1][y1-1]<<endl; 
+        cout<<result[x2][y2] - result[x2][y1-1] - result[x1-1][y2] + result[x1-1][y1-1]<<'\n'; 
     }
     return 0;
 }

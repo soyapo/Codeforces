@@ -5,10 +5,10 @@ bool flag[N];
 int n;
 void zirmaj(int k){
     if(k == n + 1){
-        for(int i = 0; i < n; i++){
+        for(int i = 1; i <= n; i++){
             if(flag[i]) cout<<i<<" ";
         }
-        cout<<endl;
+        cout<<'\n';
         return;
     }
     flag[k] = true;
@@ -17,6 +17,7 @@ void zirmaj(int k){
     zirmaj(k+1);
 }
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     cin>>n;
     zirmaj(1);
     return 0;

@@ -19,7 +19,7 @@ int main(){
                 }
             }
         }
-        cout<<(valid ? cnt : -1)<<endl<<endl;
+        cout<<(valid ? cnt : -1)<<'\n'<<'\n';
     }
     return 0;
 }

@@ -6,7 +6,7 @@ int main(){
     int t, n, x, y; cin>>t;
     while(t--){
         cin>>x>>y>>n;
-        cout<<(n - (n % x) + y <= n ? n - (n % x) + y : n - (n % x) - x + y)<<endl;
+        cout<<(n - (n % x) + y <= n ? n - (n % x) + y : n - (n % x) - x + y)<<'\n';
     }
     return 0;
 }

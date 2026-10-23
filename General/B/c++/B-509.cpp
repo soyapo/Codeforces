@@ -3,6 +3,7 @@ using namespace std;
 const int mn = 101;
 int nums[mn];
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int n, k, minn = 101, maxx = 0;
     cin>>n>>k;
     for(int i = 0; i < n; i++){
@@ -20,7 +21,7 @@ int main(){
             for(; j < nums[i]; j++){
                 cout<<j-minn+1<<" ";
             }
-            cout<<endl;
+            cout<<'\n';
         }
  
     }

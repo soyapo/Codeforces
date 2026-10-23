@@ -8,15 +8,15 @@ int main() {
     int t, k, a, b;
     cin>>t>>k;
     dp[0] = 1;
-    for(int i = 1; i <= mn; i++){
+    for(int i = 1; i < mn; i++){
         if(i < k) dp[i] = dp[i-1];
         if(i >= k) dp[i] = (dp[i - 1] + dp[i-k]) % MOD;
     }
-    for(int i = 1; i <= mn; i++)
+    for(int i = 1; i < mn; i++)
         dp[i] = (dp[i] + dp[i-1]) % MOD;
     for(int i = 0; i < t; i++){
         cin>>a>>b;
-        cout<<(dp[b] - dp[a-1] + MOD) % MOD<<endl;
+        cout<<(dp[b] - dp[a-1] + MOD) % MOD<<'\n';
     }
     return 0;
 }

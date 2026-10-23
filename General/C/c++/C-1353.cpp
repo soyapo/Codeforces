@@ -11,7 +11,7 @@ int main(){
     int t, n; cin>>t;
     while(t--){
         cin>>n;
-        cout<<dp[n]<<endl;
+        cout<<dp[n]<<'\n';
     }
     return 0;
 }

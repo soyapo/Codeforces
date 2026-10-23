@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     int t;
     cin >> t;
     string hashtags[t];
@@ -24,7 +25,7 @@ int main()
     }
     for (int i = 0; i < t; i++)
     {
-        cout << hashtags[i] << endl;
+        cout << hashtags[i] << '\n';
     }
     return 0;
 }

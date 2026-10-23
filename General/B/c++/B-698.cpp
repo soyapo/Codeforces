@@ -36,7 +36,7 @@ int main(){
         if(p[roots[i]] == root) cnt--;
         p[roots[i]] = root, cnt++;
     }
-    cout<<cnt<<endl;
+    cout<<cnt<<'\n';
     for(int i = 0; i < n; i++)
         cout<<p[i] + 1<<' ';
     return 0;

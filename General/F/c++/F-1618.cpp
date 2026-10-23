@@ -11,7 +11,7 @@ int main(){
 		ans.erase(0, min(ans.find_first_not_of('0'), ans.size()-1));
 		temp = str + "1", four[0] = temp;
 		reverse(temp.begin(), temp.end());
-		four[1] = temp = str;
+		four[1] = temp, temp = str;
 		if(temp[temp.length() - 1] == '0') while(temp[temp.length() - 1] == '0') temp.resize(temp.length() - 1);
 		four[2] = temp;
 		reverse(temp.begin(), temp.end());

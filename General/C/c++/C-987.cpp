@@ -2,6 +2,7 @@
 using namespace std;
 const int MN = 1e9, N = 3222;
 int main(){
+	ios_base::sync_with_stdio(0); cin.tie(NULL);
 	int n, ans = MN, a[N][2]; cin>>n;
 	for (int k = 0; k < 2; k++)
 		for (int i = 0; i < n; i++) cin>>a[i][k];
@@ -21,6 +22,6 @@ int main(){
 		cost += a[b][1], ans = min(ans, cost);
 	}
 	if (ans == MN) cout<<"-1\n";
-	else cout<<ans<<endl;
+	else cout<<ans<<'\n';
 	return 0;
 }

@@ -2,42 +2,29 @@
 using namespace std;
 #define fst ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);
 const int mn = 1e5 + 10;
-vector <pair<pair<int, int>, pair<int, int>> nums[mn][2];
-priority_queue <int> q;
-int n, k, par[mn];
-string s1, s2;
-long long dist[mn];
-void prt(int x);
+int n, k, dist[mn][2];
+string s[2];
 int main(){
     fst
-    cin>>n>>k>>s1>>s2;
-    for(int i = 0; i < n; i++){
-        if(s1[i] == '-')
-            if(s1[i + 1] == '-')
-                nums[i][0].push_back(i + 1)
-            else if(s1[i - 1] == '-')
-            
-            else if(s2[i + k] == '-')
-        nums[a].push_back(b);
-        nums[b].push_back(a);
-        wgh[{a, b}] = (!wgh[{a, b}] ? w : min(w, wgh[{a, b}])), wgh[{b, a}] = (!wgh[{b, a}] ? w : min(w, wgh[{b, a}]));
-    }
-    for(int i = 2; i <= n; i++)
-        dist[i] = 1e18;
-    q.push(1);
+    cin>>n>>k>>s[0]>>s[1];
+    for(int i = 0; i < n; i++)
+        dist[i][0] = dist[i][1] = -1;
+    queue <pair<int, int>> q;
+    dist[0][0] = 0;
+    q.push({0, 0});
     while(q.size()){
-        t = q.top();
+        int h = q.front().first, w = q.front().second;
         q.pop();
-        for(int i = 0; i < nums[t].size(); i++)
-            if(dist[t] + wgh[{t, nums[t][i]}] < dist[nums[t][i]]) 
-                dist[nums[t][i]] = dist[t] + wgh[{t, nums[t][i]}], par[nums[t][i]] = t, q.push(nums[t][i]);
+        int nh[3] = {h + 1, h - 1, h + k}, nw[3] = {w, w, 1 - w};
+        for(int i = 0; i < 3; i++){
+            if(nh[i] >= n)
+                return cout<<"YES", 0;
+            if(nh[i] < 0 || s[nw[i]][nh[i]] == 'X' || dist[nh[i]][nw[i]] != -1 || nh[i] <= dist[h][w])
+                continue;
+            dist[nh[i]][nw[i]] = dist[h][w] + 1;
+            q.push({nh[i], nw[i]});
+        }
     }
-    if(dist[n] == 1e18)
-        return cout<<-1, 0;
-    prt(n);
-}
-void prt(int x){
-    if(x > 1) 
-        prt(par[x]);
-    cout<<x<<' ';
+    cout<<"NO";
+    return 0;
 }

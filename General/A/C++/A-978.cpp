@@ -12,7 +12,7 @@ int main(){
         if(bl[nums[i]] > 0) nums[i] = 0, t--;
         bl[nums[i]] = 1;
     }
-    cout<<t<<endl;
+    cout<<t<<'\n';
     for(int i = 0; i < n; i++){
         if(nums[i]) cout<<nums[i]<<" ";
     }

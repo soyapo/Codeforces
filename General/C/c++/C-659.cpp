@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     long long int n, m, e = 1e9, count = 0; cin>>n>>m;
     map <int, int> nums;
     vector<int>to_buy;
@@ -13,6 +14,6 @@ int main(){
         if(m - i < 0) break;
         to_buy.push_back(i), count += 1, m-=i;
     }
-    cout<<count<<endl;
+    cout<<count<<'\n';
     for(int i: to_buy) cout<<i<<" ";
 }

@@ -9,7 +9,7 @@ int main(){
         c = a-b, cnt = 0;
         for(int i = 10; i > 0; i--)
             cnt += c / i, c = c % i;
-        cout<<abs(cnt)<<endl;
+        cout<<abs(cnt)<<'\n';
     }
     return 0;
 }

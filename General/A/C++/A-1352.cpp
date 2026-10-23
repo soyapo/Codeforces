@@ -7,16 +7,16 @@ int main(){
     while(t--){
         cin>>n;
         n2 = n, c = 0, mazrab = 1;
-        do c = n % 10 ? c++ : c, n/=10;
+        do c = n % 10 ? c + 1 : c, n/=10;
         while(n >= 1);
-        cout<<c<<endl;
+        cout<<c<<'\n';
         do{
             n3 = n2%10, n2/=10;
             if(mazrab * n3 > 0) cout<<mazrab * n3<<" ";
             mazrab *= 10;
         }
         while(n2 >= 1);
-        cout<<endl;
+        cout<<'\n';
     }
     return 0;
 }

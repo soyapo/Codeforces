@@ -7,10 +7,10 @@ vector <int> adj[mn];
 vector <int> ntc;
 void dfs(int v, int et, int ot, int dpth){
     flag[v] = 1, dpth++;
-    if(dpth % 2 == 0) init[v] == (init[v] + et) % 2;
-    else init[v] == (init[v] + ot) % 2;
+    if(dpth % 2 == 0) init[v] = (init[v] + et) % 2;
+    else init[v] = (init[v] + ot) % 2;
     if(init[v] != goal[v]){
-        ans++, et = dpth % 2 == 0 ? et++ : et, ot = dpth % 2 == 1 ? ot++ : ot;
+        ans++, et = dpth % 2 == 0 ? et + 1 : et, ot = dpth % 2 == 1 ? ot + 1 : ot;
         ntc.push_back(v + 1);
     }
     for(auto u: adj[v])
@@ -22,15 +22,15 @@ int main(){
     cin>>n;
     for(int i = 0; i < n - 1; i++){
         cin>>x>>y;
-        adj[x--].push_back(y--);
+        adj[--x].push_back(--y);
         adj[y].push_back(x);
     }
     for(int i = 0; i < n; i++) cin>>init[i];
     for(int i = 0; i < n; i++) cin>>goal[i];
     dfs(0, 0, 0, 0);
-    cout<<ans<<endl;
+    cout<<ans<<'\n';
     for(auto u: ntc)
-        cout<<u<<endl;
+        cout<<u<<'\n';
     return 0;
 }
 /*

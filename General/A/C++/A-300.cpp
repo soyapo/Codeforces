@@ -13,14 +13,18 @@ int main(){
             p.push_back(a);
         if(a < 0) 
             n.push_back(a);
-        else 
+        if(a == 0) 
             z.push_back(a);
         if(a < 0) 
             tmp = a;
     }
-    if(n.size() % 2 == 1){
+    if(n.size() % 2 == 0){
         z.push_back(tmp);
         n.pop_back();
+    }
+    if(p.empty()){
+        p.push_back(n.back()), n.pop_back();
+        p.push_back(n.back()), n.pop_back();
     }
 
     cout<<n.size()<<' ';

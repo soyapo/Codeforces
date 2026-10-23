@@ -11,7 +11,7 @@ int main(){
             cout<<string(j, '(') + string(j, ')');
             int temp = n - j;
             for(int k = 0; k < temp; k++) cout<<"()";
-            cout<<endl;
+            cout<<'\n';
         }
     }
     return 0;

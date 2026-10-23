@@ -3,8 +3,8 @@ using namespace std;
 #define fst ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);
 int main(){
     fst
-    vector <int> arr {1200, 1400, 1600, 1900, 2100, 2300, 2400, 2600, 3000}, r; cin>>r;
-    cout<<lower_bound(arr.begin(), arr.end(), r) - arr.begin();
+    vector <int> arr {1200, 1400, 1600, 1900, 2100, 2300, 2400, 2600, 3000}; int r; cin>>r;
+    cout<<*upper_bound(arr.begin(), arr.end(), r);
     return 0;
 }
 /*

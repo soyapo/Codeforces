@@ -7,7 +7,7 @@ int main(){
     while(t--){
         cin>>n;
         if(n < 10) cout<<n / 9<<'\n';
-        else cout<<(n % 10 == 9 ? (n / 10) + 1 : n / 10)<<endl;
+        else cout<<(n % 10 == 9 ? (n / 10) + 1 : n / 10)<<'\n';
     }
 }
 /*

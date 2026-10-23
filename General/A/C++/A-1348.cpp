@@ -6,7 +6,7 @@ int main(){
     long long int t, n; cin >> t;
     while (t--){
         cin >> n;
-        cout << 2 * (pow(2, n / 2) - 1) << endl;
+        cout << 2 * (pow(2, n / 2) - 1) << '\n';
     }
     return 0;
 }

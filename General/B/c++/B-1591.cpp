@@ -3,10 +3,12 @@ using namespace std;
 const long long mn = 2e5 + 1;
 long long nums[mn], mx;
 int top(long long arr[], long long len){
-    for (int i = 1; i < len; i++) mx = max(mx, arr[i]);
+    mx = 0;
+    for (int i = 0; i < len; i++) mx = max(mx, arr[i]);
     return mx;
 }
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(NULL);
     long long int t, n, m, count = 0;
     cin >> t;
     while (t--){
@@ -18,7 +20,7 @@ int main(){
             for (int i = n - 1; i >= 0; --i){
                 if (nums[i] > m) count = count + 1, m = nums[i];
             }
-            cout<<count<<endl;
+            cout<<count<<'\n';
         }
     }
     return 0;

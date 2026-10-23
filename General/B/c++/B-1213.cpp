@@ -6,14 +6,15 @@ int main(){
     int t, n, a, mx, cnt; cin>>t;
     while(t--){
         cin>>n;
-        mx = -1, cnt = 0;
-        for(int i = 0; i < n; i++){
-            cin>>a;
-            mx = min(mx, a);
-            if(a > mx){
+        mx = 1e9, cnt = 0;
+        vector <int> nums(n);
+        for(int i = 0; i < n; i++)
+            cin>>nums[i];
+        for(int i = n - 1; i >= 0; i--){
+            a = nums[i];
+            if(a > mx)
                 cnt++;
-                cout<<i<<" inja\n";
-            }
+            mx = min(mx, a);
         }
         cout<<cnt<<'\n';
     }

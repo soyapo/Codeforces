@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
+	ios_base::sync_with_stdio(0); cin.tie(NULL);
 	string chars[9], temp;
 	int valid = 1, index = 0;
 	for(int i = 0; i<3; i++){
